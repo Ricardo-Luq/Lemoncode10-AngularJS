@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		p{
+			color: red;
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	
+
+	
+	<div style="margin: 0 auto">
+		<form role="form" name="movForm" style="margin: 0 auto; width: 50%">
+			<div>
+				<label for="poster">Poster</label>
+				<input type="text" name="poster" id="poster" placeholder="{{vm.movie.poster}}"ng-required="true"ng-model="vm.poster">
+				<div ng-messages="movForm.poster.$error">
+					<p ng-messages="required">This field is required!</p>
+				</div>
+			</div>
+			<div>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="{{vm.movie.name}}"ng-model="vm.name"ng-required="true">
+				<div ng-messages="movForm.name.$error">
+					<p ng-messages="required">This field is required!</p>
+				</div>
+			</div>
+			<div>
+				<label for="director">Director</label>
+				<input type="text" name="director" id="director" placeholder="{{vm.movie.director}}"ng-model="vm.director"ng-required="true">
+				<div ng-messages="movForm.director.$error">
+					<p ng-messages="required">This field is required!</p>
+				</div>
+			</div>
+			<div>
+				<label for="year">Year</label>
+				<input type="number" min="1920"max="2024"name="year" id="year" placeholder="{{vm.movie.year}}"ng-model="vm.year"ng-required="true">
+				<div ng-messages="movForm.year.$error">
+					<p ng-messages="required">This field is required!</p>
+				</div>
+			</div>
+			<button type="submit" ng-click="vm.handleClick(vm.poster, vm.name, vm.year, vm.director)"ng-disabled="movForm.$pristine">Save
+			</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div style="width: 20%; border: 2px dashed rgb(214, 214, 214); margin: 0 auto;">
+	<a ui-sref="movieedit({id: vm.id})">
+		<img src="{{ vm.poster }}" style="width: 145px;">
+	</a>
+	<div>
+		<p>{{ vm.name }} ({{ vm.year }})</p>
+		<p>{{ vm.director }}</p>
+		<button ng-click="vm.eraseMovie(vm.id)">erase movie</button>
+	</div>
+</div>

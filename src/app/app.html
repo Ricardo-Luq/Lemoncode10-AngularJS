@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    nav {
+      width: 100%;
+      background: linear-gradient(#c9c9c9, #d7eaee);
+      padding: 10px;
+    }
+
+    .panel {
+      padding: 5px;
+    }
+    .panel>div {
+      margin: 7px;
+    }
+    nav>p{
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <p><a href="http://localhost:8080/#!/movieedit">Create Movie</a></p>
+      <p><a ui-sref="home">Main page
+
+      </a></p>
+    </nav>
+  </header>
+  <div>
+    <div ui-view="content"></div>
+  </div>
+</body>
+</html>
